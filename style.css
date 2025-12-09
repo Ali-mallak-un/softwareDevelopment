@@ -1,0 +1,60 @@
+/* General styles for the index file */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* added font family */
+@font-face {
+    font-family: "Bmitra";
+    src: url(./Fonts/BMitraBd.ttf);
+}
+body {
+    font-family: "Bmitra";
+    background-color: #00B7B5;
+    color: #ffffff;
+    direction: rtl;
+}
+/* style for header website */
+header {
+    background-color: #018790;
+    color: white;
+    padding: 0.5rem 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+header > :first-child{
+    font-size: xx-large;
+    text-decoration: none;
+    color: #ffffff;
+    margin-left: 2rem;
+}
+nav {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+
+}
+nav ul li{
+    min-height: fit-content;
+    min-width: fit-content;
+    /* margin: 0.5rem; */
+    padding: 0.8rem 0.5rem;
+    transition: 0.3s;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: large;
+}
+nav ul li:hover {
+    transition: 0.1s;
+    background-color: #005461;
+    border-radius: 0.5rem;
+}
