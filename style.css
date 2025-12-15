@@ -23,6 +23,7 @@ header {
     display: flex;
     flex-direction: row;
     align-items: center;
+    flex-wrap: wrap;
 }
 header > :first-child{
     font-size: xx-large;
@@ -57,4 +58,59 @@ nav ul li:hover {
     transition: 0.1s;
     background-color: #005461;
     border-radius: 0.5rem;
+}
+
+/* style for services.html */
+.toolbox{
+    margin: 0.8rem;
+}
+.toolbox h2{
+    color: black;
+}
+.services{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+.services input{
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    width: 50%;
+    font-size: medium;
+}
+.services button{
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: #018790;
+    color: white;
+    font-size: medium;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 50%;
+}
+.services button:hover,
+.services a:hover {
+    background-color: #005461;
+    transition: background-color 0.1s;
+}
+.services img{
+    border-radius: 0.5rem;
+    max-width: 200px;
+    max-height: 200px;
+}
+.services a{
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    background-color: #018790;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: medium;
+    transition: 0.3s;
+    width: 30%;
 }
