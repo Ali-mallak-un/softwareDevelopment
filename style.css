@@ -270,3 +270,139 @@ footer {
 .feature-card p, .preview-card p {
     color: #555555;
 }
+
+/* styles for info file */
+.about-hero {
+    background: linear-gradient(135deg, #116860 0%, #0c4d47 100%);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+.about-hero h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+.hero-line {
+    width: 60px;
+    height: 4px;
+    background: #27ae60;
+    margin: 15px auto;
+    border-radius: 2px;
+}
+.about-hero p {
+    font-size: 1.3rem;
+    opacity: 0.9;
+    font-weight: 300;
+}
+.about-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+.about-flex-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    margin-bottom: 1rem;
+}
+.about-text {
+    flex: 1;
+    text-align: right;
+}
+.about-text h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.9;
+    text-align: justify;
+}
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+.about-image img {
+    width: 100%;
+    max-width: 500px;
+    height: 350px; 
+    object-fit: cover;
+    border-radius: 50px;
+    border: 5px solid #fff;
+}
+.feedback-container {
+    color: #ffffff;
+    background-color: #116860;
+    padding: 3rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    max-width: 700px;
+    margin: 4rem auto;
+    text-align: center;
+
+}
+.contact-form {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #eee;
+    border-radius: 0.8rem;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s;
+    background-color: #fafafa;
+}
+.form-group input:focus, .form-group textarea:focus {
+    border-color: #116860;
+    background-color: #fff;
+    box-shadow: 0 0 8px rgba(17, 104, 96, 0.1);
+}
+.submit-btn {
+    background-color: #004d45;
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 0.8rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.submit-btn:hover {
+    transform: translateY(-2px);
+}   
+.form-status {
+    margin-top: 1rem;
+    font-weight: bold;
+}
+@media (max-width: 992px) {
+    .about-flex-row {
+        gap: 2rem;
+    }
+}
+@media (max-width: 768px) {
+    .about-flex-row, .about-flex-row.reverse {
+        flex-direction: column !important;
+        text-align: center;
+        gap: 2rem;
+    }
+    .about-text {
+        text-align: center;
+    }
+    .about-text p {
+        text-align: center;
+    }
+    .about-image img {
+        height: 250px;
+    }
+}
