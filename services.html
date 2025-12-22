@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tools box|services</title>
-
+    
     <!-- added style file -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -21,21 +21,63 @@
     </header>
 
     <main>
-        <div class="toolbox">
-            <h2>ابزار 1 : تبدیل لینک به کد کیو آر</h2>
-            <div class="services">
-                <input type="text" placeholder="لینک خود را وارد کنید" id="linkInput">
-                <button id="generateBtn">تولید QR code</button>
-                    <img src="https://placehold.co/600x400/png" alt="photo-link">
-                    <a href="/downlaodQR">دانلود QR Code</a>
-                </div>
+    <div class="toolbox">
+        <h2>تبدیل لینک به QR Code</h2>
+        <div class="services">
+            <input type="text" placeholder="لینک خود را وارد کنید." id="linkInput">
+            <button id="generateBtn">تولید کد QR</button>
+            
+            <div id="resultContainer" style="display: none;">
+                <img id="qrImage" src="" alt="QR Code">
+                <br>
+                <a id="downloadLink" href="#" download="qrcode.png">دریافت فایل تصویر</a>
             </div>
-        </div>  
-
-    </main>
+        </div>
+    </div>
+</main>
 
     <footer>
-        
+        <p>&copy; 2025 جعبه ابزار. تمام حقوق محفوظ است.</p>
     </footer>
+    <script>
+        const generateBtn = document.getElementById('generateBtn');
+        const linkInput = document.getElementById('linkInput');
+        const qrImage = document.getElementById('qrImage');
+        const downloadLink = document.getElementById('downloadLink');
+        const resultContainer = document.getElementById('resultContainer');
+
+        generateBtn.addEventListener('click', async () => {
+            const url = linkInput.value;
+
+            if (!url) {
+                alert('لطفاً یک لینک معتبر وارد کنید');
+                return;
+            }
+
+            try {
+                const response = await fetch('/generateQR', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ url: url })
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    // نمایش تصویر تولید شده
+                    qrImage.src = data.qrImage;
+                    downloadLink.href = data.qrImage; // برای دانلود هم از همان Base64 استفاده می‌کنیم
+                    resultContainer.style.display = 'block';
+                } else {
+                    alert(data.error);
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('خطایی در اتصال به سرور رخ داد');
+            }
+        });
+    </script>
 </body>
 </html>
