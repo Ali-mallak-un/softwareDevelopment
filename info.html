@@ -21,11 +21,76 @@
     </header>
 
     <main>
+        <section class="about-hero">
+            <div class="hero-content">
+                <h1>داستان شکل‌گیری جعبه ابزار</h1>
+                <div class="hero-line"></div>
+                <p>ما برای ساده‌تر کردن دنیای دیجیتال شما آمده‌ایم</p>
+            </div>
+        </section>
 
+        <section class="about-content">
+            <div class="about-flex-row">
+                <div class="about-text">
+                    <h2>چرا جعبه ابزار؟</h2>
+                    <p>
+                        همه چیز از یک نیاز ساده شروع شد. ما خسته بودیم از سایت‌های شلوغ و پر از تبلیغاتی که برای یک کار
+                        ساده مثل ساخت کد QR، وقت کاربر را تلف می‌کردند.
+                        <strong>جعبه ابزار</strong> ساخته شد تا خانه امن و سریع ابزارهای دیجیتال شما باشد.
+                    </p>
+                </div>
+                <div class="about-image">
+                    <img src="https://media.istockphoto.com/id/1457290530/fr/photo/des-adolescents-asiatiques-font-des-devoirs-de-bras-robotique-et-de-voitures-robotiques-en.jpg?s=1024x1024&w=is&k=20&c=zSOLYp53wr6j9BUa1lwvTe9O9FLXVhJwxOY70NBPdms="
+                        alt="تکنولوژی">
+                </div>
+            </div>
+
+            <div class="about-flex-row reverse">
+                <div class="about-text">
+                    <h2>مخاطب ما کیست؟</h2>
+                    <p>
+                        از برنامه‌نویسان و طراحان گرفته تا دانشجویان و صاحبان کسب‌وکارهای نوپا؛ هر کسی که به دنبال سرعت
+                        و دقت در انجام کارهای کوچک دیجیتال است، مخاطب هدف ماست.
+                    </p>
+                </div>
+                <div class="about-image">
+                    <img src="https://media.istockphoto.com/id/1557356468/fr/photo/d%C3%A9veloppeur-de-logiciels-ou-programmeur-programme-de-codage-avec-ordinateur-portable-cr%C3%A9er-de.jpg?s=1024x1024&w=is&k=20&c=4kiISplX6VNglV28XZJGLvkmbIxE0CYYRuX6M0otaKE=">
+                </div>
+            </div>
+
+            <div class="feedback-container" id="feedback-form">
+            <h2>ارسال نظرات و پیشنهادات</h2>
+            <p>نظر شما به ما کمک می‌کند تا ابزارهای بهتری بسازیم.</p>
+            
+            <form id="commentForm" class="contact-form">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="نام و نام خانوادگی" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="ایمیل شما" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" rows="5" placeholder="پیام یا پیشنهاد شما..." required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">ارسال پیام</button>
+            </form>
+            <div id="formStatus" class="form-status"></div>
+        </div>
+    </section>
     </main>
 
     <footer>
         <p>&copy; Tools Box </p>
     </footer>
+    <script>
+        document.getElementById('commentForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const status = document.getElementById('formStatus');
+            status.innerHTML = "پیام شما با موفقیت ثبت شد. ممنون که به ما کمک می‌کنید! ❤️";
+            status.style.color = "#27ae60";
+
+            this.reset()
+        });
+    </script>
 </body>
 </html>
