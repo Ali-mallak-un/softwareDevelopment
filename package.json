@@ -1,0 +1,25 @@
+{
+  "name": "softwaredevelopment",
+  "version": "1.0.0",
+  "description": "This repository is for software development lesson.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ali-mallak-un/softwareDevelopment.git"
+  },
+  "keywords": [],
+  "author": "Ali-Mallak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ali-mallak-un/softwareDevelopment/issues"
+  },
+  "homepage": "https://github.com/Ali-mallak-un/softwareDevelopment#readme",
+  "dependencies": {
+    "express": "^5.2.1",
+    "qrcode": "^1.5.4"
+  }
+}
