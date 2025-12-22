@@ -14,6 +14,13 @@ body {
     background-color: #00B7B5;
     color: #ffffff;
     direction: rtl;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+main {
+    flex: 1;
 }
 /* style for header website */
 header {
