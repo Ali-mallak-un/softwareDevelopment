@@ -20,12 +20,42 @@
         </nav>
     </header>
 
-    <main>
+    <main class="auth-container">
+        <div class="auth-card">
+            <div class="auth-toggle">
+                <button id="loginToggle" class="active">ورود</button>
+                <button id="registerToggle">ثبت نام</button>
+            </div>
 
+            <h2 id="authTitle">خوش آمدید</h2>
+            
+            <form id="authForm">
+                <div class="form-group" id="nameGroup" style="display: none;">
+                    <input type="text" id="fullName" placeholder="نام و نام خانوادگی">
+                </div>
+                
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="ایمیل" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="password" id="password" placeholder="رمز عبور" required>
+                </div>
+
+                <button type="submit" id="submitBtn" class="auth-btn">ورود به حساب</button>
+            </form>
+
+            <div class="auth-footer">
+                <a href="#" id="forgotPassword">فراموشی رمز عبور؟</a>
+            </div>
+            <div id="authMessage" class="auth-message"></div>
+        </div>
     </main>
 
     <footer>
         <p>&copy; Tools Box </p>
     </footer>
+
+    <script src="auth.js"></script>
 </body>
 </html>
